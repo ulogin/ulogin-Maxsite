@@ -56,9 +56,8 @@ function ulogin_login_form_auth($text = '') {
     global $idUcounter;
  	$idUcounter++;
 	$text .= 'соцсети';
-    $page = mso_current_url();
-    $curpage = getinfo('siteurl') . $page;
-    $current_url =$curpage;
+    $page = mso_current_url(); 
+    $current_url = getinfo('siteurl') . 'maxsite-ulogin-auth?' . getinfo('siteurl') . $page;
 	$text .= '<div id="ul_'.$idUcounter.'"  data-ulogin="verify=1;display=small;fields=first_name,last_name,photo_big,email,bdate,'.
 	'nickname;providers=vkontakte,google,mailru,facebook;hidden=other;redirect_uri='.urlencode($current_url).'" ></div>';
     if($idUcounter==1 && $page=="login" ){
