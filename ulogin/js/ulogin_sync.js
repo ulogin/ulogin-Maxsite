@@ -24,8 +24,8 @@ function uloginDeleteAccount(network, identity) {
                 alert(data.msg);
             }
             if (data.answerType == 'ok') {
-                var accounts = $('#ulogin_accounts'),
-                    nw = accounts.find('[data-ulogin-network=' + network + ']');
+                var accounts = $('#ulogin_accounts');
+                nw = accounts.find('[data-ulogin-network=' + network + ']');
                 if (nw.length > 0) nw.hide();
                 alert(data.msg);
             }
