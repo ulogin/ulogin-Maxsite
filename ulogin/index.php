@@ -137,6 +137,7 @@ function ulogin_init($arg = array()) {
 				'msg' => "Удаление привязки аккаунта ".$_POST['network']." успешно выполнено"
 			));
 			unset($_POST['identity']);
+			unset($_POST['network']);
 			exit;
 		} catch (Exception $e) {
 			echo json_encode(array(
@@ -144,6 +145,7 @@ function ulogin_init($arg = array()) {
 				'msg' => "Ошибка при удалении аккаунта \n Exception: " . $e->getMessage()
 			));
 			unset($_POST['identity']);
+			unset($_POST['network']);
 			exit;
 		}
 	}
